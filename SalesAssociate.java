@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
-public class SalesAssociate extends Employee{
+public class SalesAssociate extends Employee {
     double salary;
     SalesManager salesManager;
     ArrayList<Employee> employees;
 
-    public SalesAssociate(int employeeID, String employeeName, ArrayList<Customer> myCustomers,double salary, SalesManager salesManager, ArrayList employees) {
+    public SalesAssociate(int employeeID, String employeeName, ArrayList<Customer> myCustomers, double salary, SalesManager salesManager, ArrayList employees) {
         super(employeeID, employeeName, myCustomers);
         this.salary = salary;
         this.salesManager = salesManager;
@@ -37,4 +37,7 @@ public class SalesAssociate extends Employee{
         this.employees = employees;
     }
 
+    public double totalSales() {
+        return (100 * myCustomers.size());
+    }
 }

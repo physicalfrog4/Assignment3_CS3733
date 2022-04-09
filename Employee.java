@@ -11,18 +11,18 @@ public abstract class Employee {
         this.myCustomers = myCustomers;
     }
 
-
     public void setManager(SalesManager salesManager){
         salesManager.addEmployees(salesManager);
     }
     public void addCustomer(Customer customer){
-        myCustomers.add(customer);
+       this.myCustomers.add(customer);
     }
-    public ArrayList<Customer> getCustomers(ArrayList<Customer> customers){
-        return null;
+    public ArrayList<Customer> getCustomers(){
+        return myCustomers;
     }
 
     public static String toString(SalesManager salesManager){
+
         return "Sales Manager:" + salesManager.getEmployeeName() + "Manager: " + salesManager.getManager()
                 + "Employees: " + salesManager.getEmployees();
     }
