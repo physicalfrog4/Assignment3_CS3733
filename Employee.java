@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public abstract class Employee {
     public int employeeID;
     public String employeeName;
-    public ArrayList<Customer> myCustomers;
+    public ArrayList<Customer> myCustomers = new ArrayList<Customer>();
     protected SalesManager manager;
     protected double salary;
 
@@ -20,6 +20,7 @@ public abstract class Employee {
     }
     public void addCustomer(Customer customer){
        this.myCustomers.add(customer);
+       customer.setEmployee(this);
     }
     public ArrayList<Customer> getCustomers(){
         return myCustomers;

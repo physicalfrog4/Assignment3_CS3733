@@ -3,15 +3,15 @@ import java.util.ArrayList;
 public class Customer {
     int customerID;
     String customerName;
-    ArrayList<Employee> myEmployee;
+    ArrayList<Employee> myEmployee = new ArrayList<>();
 
     public Customer(int customerID, String customerName) {
         this.customerID = customerID;
         this.customerName = customerName;
     }
 
-    private void setEmployee(Employee employee) {
-        myEmployee.add(employee);
+    public void setEmployee(Employee employee) {
+        this.getMyEmployee().add(employee);
     }
 
     public void setCustomerID(int customerID) {
@@ -39,9 +39,17 @@ public class Customer {
     }
 
     public String toString() {
+        System.out.print("Customer: " + customerName + ", Employee: ");
+        int size = myEmployee.size();
+        for (int i = 0; i < size; i++) {
+            System.out.print(myEmployee.get(i).employeeName);
+            if (i + 1 < size) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println();
         return "";
     }
-
 
 
 }

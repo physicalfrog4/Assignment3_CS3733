@@ -4,21 +4,13 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String args[]) {
-        ArrayList<Employee> empList1 = new ArrayList<Employee>();
-        ArrayList<Employee> empList2 = new ArrayList<Employee>();
-        ArrayList<Employee> empList3 = new ArrayList<Employee>();
-        //associates customers
-        ArrayList<Customer> empList4 = new ArrayList<>();
-        ArrayList<Customer> empList5 = new ArrayList<>();
-        ArrayList<Customer> empList6 = new ArrayList<>();
-        ArrayList<Customer> empList7 = new ArrayList<>();
-        //Sales Managers customers
-        ArrayList<Customer> custList1 = new ArrayList<>();
-        ArrayList<Customer> custList2 = new ArrayList<>();
-        ArrayList<Customer> custList3 = new ArrayList<>();
-        ArrayList<Customer> custList4 = new ArrayList<>();
-        ArrayList<Customer> custList5 = new ArrayList<>();
-        ArrayList<Customer> notCust = new ArrayList<>();
+
+        ArrayList<Customer> custList1 = new ArrayList<Customer>();
+        ArrayList<Customer> custList2 = new ArrayList<Customer>();
+        ArrayList<Customer> custList3 = new ArrayList<Customer>();
+        ArrayList<Customer> custList4 = new ArrayList<Customer>();
+        ArrayList<Customer> custList5 = new ArrayList<Customer>();
+        ArrayList<Customer> notCust = new ArrayList<Customer>();
         Customer Jordan = new Customer(14, "Jordan");
         Customer Stephanie = new Customer(22, "Stephanie");
         Customer Gary = new Customer(76, "Gary");
@@ -27,14 +19,14 @@ public class Main {
         Customer Oliver = new Customer(35, "Oliver");
 
 
-        SalesManager Serenity = new SalesManager(101, "Serenity", notCust, 75000, null, empList1);
-        SalesManager Jose = new SalesManager(37, "Jose", notCust, 75000, Serenity, empList2);
-        SalesAssociate David = new SalesAssociate(105, "David", custList1, 35000, Serenity, null);
-        SalesAssociate Emily = new SalesAssociate(42, "Emily", custList2, 35000, Jose, null);
-        SalesManager Amy = new SalesManager(112, "Amy", custList4, 75000, Serenity, empList3);
+        SalesManager Serenity = new SalesManager(101, "Serenity", notCust, 75000, null);
+        SalesManager Jose = new SalesManager(37, "Jose", notCust, 75000, Serenity);
+        SalesAssociate David = new SalesAssociate(105, "David", custList1, 35000, Serenity);
+        SalesAssociate Emily = new SalesAssociate(42, "Emily", custList2, 35000, Jose);
+        SalesManager Amy = new SalesManager(112, "Amy", custList4, 75000, Serenity);
         //SalesAssociate
-        SalesAssociate George = new SalesAssociate(58, "George", custList5, 35000, Amy, null);
-        SalesAssociate Anne = new SalesAssociate(88, "Anne", custList3, 35000, Amy, null);
+        SalesAssociate George = new SalesAssociate(58, "George", custList5, 35000, Amy);
+        SalesAssociate Anne = new SalesAssociate(88, "Anne", custList3, 35000, Amy);
         //Serenity's list
         Serenity.addEmployees(Jose);
         Serenity.addEmployees(Amy);
@@ -49,17 +41,6 @@ public class Main {
         Amy.addCustomer(Damien);
         George.addCustomer(Oliver);
 
-        //Total Sales.
-        /*
-        System.out.println(Serenity.totalSales());
-        System.out.println(Jose.totalSales());
-        System.out.println(Amy.totalSales());
-        System.out.println(David.totalSales());
-        System.out.println(Emily.totalSales());
-        System.out.println(George.totalSales());
-        System.out.println(Anne.totalSales());
-
-         */
 
         //Managers .toString()
         System.out.println(Serenity.toString());
@@ -74,5 +55,8 @@ public class Main {
 
 
 
+
+        Stephanie.toString();
+        Damien.toString();
     }
 }

@@ -3,13 +3,12 @@ import java.util.ArrayList;
 public class SalesAssociate extends Employee {
     double salary;
     SalesManager salesManager;
-    ArrayList<Employee> employees;
 
-    public SalesAssociate(int employeeID, String employeeName, ArrayList<Customer> myCustomers, double salary, SalesManager salesManager, ArrayList employees) {
+    public SalesAssociate(int employeeID, String employeeName, ArrayList<Customer> myCustomers, double salary, SalesManager salesManager) {
         super(employeeID, employeeName, myCustomers);
         this.salary = salary;
         this.salesManager = salesManager;
-        this.employees = employees;
+
     }
 
     public double getSalary() {
@@ -18,10 +17,6 @@ public class SalesAssociate extends Employee {
 
     public SalesManager getSalesManager() {
         return salesManager;
-    }
-
-    public ArrayList<Employee> getEmployees() {
-        return employees;
     }
 
     public void setSalary(double salary) {
@@ -33,9 +28,9 @@ public class SalesAssociate extends Employee {
         this.salesManager = salesManager;
     }
 
-    public void setEmployees(ArrayList<Employee> employees) {
-        this.employees = employees;
-    }
+ //   public void setEmployees(ArrayList<Employee> employees) {
+   //     this.employees = employees;
+    //}
 
     public double totalSales() {
         return (100 * myCustomers.size());
