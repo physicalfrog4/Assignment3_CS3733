@@ -1,9 +1,8 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class SalesManager extends Employee {
-    double salary;
-    SalesManager manager;
+    //double salary;
+    //SalesManager manager;
     ArrayList<Employee> employees;
 
     public SalesManager(int employeeID, String employeeName, ArrayList<Customer> myCustomers, double salary, SalesManager manager, ArrayList<Employee> employees) {
@@ -17,29 +16,14 @@ public class SalesManager extends Employee {
         employees.add(employee);
     }
 
-    public String getEmployees(){
-        StringBuilder list = new StringBuilder();
-        for (Employee employee : employees) {
-            list.append(employee.getEmployeeName());
-            list.append(",");
-        }
-        list.setLength(list.length()-1);
-        return list.toString();
-    }
-
-    /**
-     * For Ali: since I already made a new function for get employees I made this simple function
-     * to retreive your list size.
-     * @return
-     */
-    public ArrayList<Employee> getEmployeeForTotal(){
+    public ArrayList<Employee> getEmployees(){
         return employees;
     }
 
     public double totalSales() {
         double A = 0, B = 0;
 
-            A = getEmployeeForTotal().size();
+            A = getEmployees().size();
             B = getCustomers().size();
 
        // System.out.println("employees: " + getEmployees().size() + " customers: " + getCustomers().size());

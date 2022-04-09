@@ -50,6 +50,7 @@ public class Main {
         George.addCustomer(Oliver);
 
         //Total Sales.
+        /*
         System.out.println(Serenity.totalSales());
         System.out.println(Jose.totalSales());
         System.out.println(Amy.totalSales());
@@ -58,16 +59,18 @@ public class Main {
         System.out.println(George.totalSales());
         System.out.println(Anne.totalSales());
 
+         */
+
         //Managers .toString()
-        System.out.println(Employee.toString(Serenity));
-        System.out.println(Employee.toString(Jose));
-        System.out.println(Employee.toString(Amy));
+        System.out.println(Serenity.toString());
+        System.out.println(Jose.toString());
+        System.out.println(Amy.toString());
         //Associates .toString()
 
-        System.out.println(Employee.toString(David));
-        System.out.println(Employee.toString(Emily));
-        System.out.println(Employee.toString(George));
-        System.out.println(Employee.toString(David));
+        System.out.println(David.toString());
+        System.out.println(Emily.toString());
+        System.out.println(George.toString());
+        System.out.println(Damien.toString());
 
 
 
