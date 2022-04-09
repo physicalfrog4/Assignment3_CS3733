@@ -1,6 +1,7 @@
 //import java.util.HashMap;
 
 import java.util.ArrayList;
+import java.util.zip.GZIPOutputStream;
 
 public class Main {
     public static void main(String args[]) {
@@ -26,14 +27,20 @@ public class Main {
         Serenity.addEmployees(Amy);
         Serenity.addEmployees(David);
         Jose.addEmployees(Emily);
+        Jose.setManager(Serenity);
         Amy.addEmployees(Anne);
         Amy.addEmployees(George);
         David.addCustomer(Jordan);
+        David.setManager(Serenity);
         Emily.addCustomer(Stephanie);
         Emily.addCustomer(Gary);
+        Emily.setManager(Jose);
         Anne.addCustomer(Lisa);
+        Anne.setManager(Amy);
         Amy.addCustomer(Damien);
+        Amy.setManager(Serenity);
         George.addCustomer(Oliver);
+        George.setManager(Amy);
 
 
         //Managers .toString()
