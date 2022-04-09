@@ -4,8 +4,8 @@ public class SalesAssociate extends Employee {
     double salary;
     SalesManager salesManager;
 
-    public SalesAssociate(int employeeID, String employeeName, ArrayList<Customer> myCustomers, double salary, SalesManager salesManager) {
-        super(employeeID, employeeName, myCustomers);
+    public SalesAssociate(int employeeID, String employeeName, double salary, SalesManager salesManager) {
+        super(employeeID, employeeName);
         this.salary = salary;
         this.salesManager = salesManager;
 
@@ -28,9 +28,6 @@ public class SalesAssociate extends Employee {
         this.salesManager = salesManager;
     }
 
- //   public void setEmployees(ArrayList<Employee> employees) {
-   //     this.employees = employees;
-    //}
 
     public double totalSales() {
         return (100 * myCustomers.size());

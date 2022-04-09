@@ -8,10 +8,10 @@ public abstract class Employee {
     protected double salary;
 
 
-    public Employee(int employeeID, String employeeName, ArrayList<Customer> myCustomers) {
+    public Employee(int employeeID, String employeeName) {
         this.employeeID = employeeID;
         this.employeeName = employeeName;
-        this.myCustomers = myCustomers;
+    //    this.myCustomers = myCustomers;
     }
 
     public void setManager(SalesManager salesManager){
