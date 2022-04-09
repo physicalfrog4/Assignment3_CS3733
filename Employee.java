@@ -4,6 +4,9 @@ public abstract class Employee {
     public int employeeID;
     public String employeeName;
     public ArrayList<Customer> myCustomers;
+    protected SalesManager manager;
+    protected double salary;
+
 
     public Employee(int employeeID, String employeeName, ArrayList<Customer> myCustomers) {
         this.employeeID = employeeID;
@@ -12,7 +15,8 @@ public abstract class Employee {
     }
 
     public void setManager(SalesManager salesManager){
-        salesManager.addEmployees(salesManager);
+        this.manager = salesManager;
+        salesManager.addEmployees(this);
     }
     public void addCustomer(Customer customer){
        this.myCustomers.add(customer);
@@ -20,12 +24,16 @@ public abstract class Employee {
     public ArrayList<Customer> getCustomers(){
         return myCustomers;
     }
+    public abstract String toString();
 
+    /* This was my old code, I'm trying to implement a personalized one.
     public static String toString(SalesManager salesManager){
 
         return "Sales Manager:" + salesManager.getEmployeeName() + "Manager: " + salesManager.getManager()
-                + "Employees: " + salesManager.getEmployees();
+                + "Employees: " + salesManager.getEmployees() + "Total Salary: " + salesManager.totalSales();
     }
+
+     */
 
     public int getEmployeeID() {
         return employeeID;
@@ -42,4 +50,5 @@ public abstract class Employee {
     private void setEmployeeName(String employeeName) {
         this.employeeName = employeeName;
     }
+
 }

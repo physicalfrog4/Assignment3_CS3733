@@ -40,4 +40,18 @@ public class SalesAssociate extends Employee {
     public double totalSales() {
         return (100 * myCustomers.size());
     }
+
+    @Override
+    public String toString() {
+        String employeeString = "null";
+        String managerName;
+        if (this.manager == null) {
+            managerName = "null";
+        } else {
+            managerName = this.manager.getEmployeeName();
+        }
+        return String.format(
+                "Sales Associate: %s. Manager: %s. Employees: %s. Total Sales: %.0f",
+                this.employeeName, managerName, employeeString, totalSales());
+    }
 }

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class SalesManager extends Employee {
     double salary;
@@ -7,7 +8,7 @@ public class SalesManager extends Employee {
 
     public SalesManager(int employeeID, String employeeName, ArrayList<Customer> myCustomers, double salary, SalesManager manager, ArrayList<Employee> employees) {
         super(employeeID, employeeName, myCustomers);
-        this.salary = salary;
+        this.salary = 75000;
         this.manager = manager;
         this.employees = employees;
     }
@@ -16,14 +17,29 @@ public class SalesManager extends Employee {
         employees.add(employee);
     }
 
-    public ArrayList<Employee> getEmployees() {
+    public String getEmployees(){
+        StringBuilder list = new StringBuilder();
+        for (Employee employee : employees) {
+            list.append(employee.getEmployeeName());
+            list.append(",");
+        }
+        list.setLength(list.length()-1);
+        return list.toString();
+    }
+
+    /**
+     * For Ali: since I already made a new function for get employees I made this simple function
+     * to retreive your list size.
+     * @return
+     */
+    public ArrayList<Employee> getEmployeeForTotal(){
         return employees;
     }
 
     public double totalSales() {
         double A = 0, B = 0;
 
-            A = getEmployees().size();
+            A = getEmployeeForTotal().size();
             B = getCustomers().size();
 
        // System.out.println("employees: " + getEmployees().size() + " customers: " + getCustomers().size());
@@ -39,13 +55,36 @@ public class SalesManager extends Employee {
     }
 
     public void setSalary(double salary) {
-        salary = 75000;
         this.salary = salary;
     }
 
     @Override
     public void setManager(SalesManager manager) {
         this.manager = manager;
+    }
+
+    /**
+     * for reference %s means insert string and %d is insert double.
+     * @return
+     */
+    @Override
+    public String toString() {
+        StringBuilder employeeString = new StringBuilder();
+        for (int i = 0; i < employees.size(); i++) {
+            employeeString.append(String.format("%s %d", employees.get(i).getEmployeeName(), employees.get(i).getEmployeeID()));
+            if (i != employees.size() - 1) {
+                employeeString.append(", ");
+            }
+        }
+        String myManageName;
+        if (this.manager == null) {
+            myManageName = "null";
+        } else {
+            myManageName = this.manager.getEmployeeName();
+        }
+        return String.format(
+                "Sales Manager: %s. Manager: %s. Employees: %s. Total Sales: %.0f",
+                this.employeeName, myManageName, employeeString.toString(), totalSales());
     }
 
     public void setEmployees(ArrayList<Employee> employees) {
