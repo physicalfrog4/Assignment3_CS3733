@@ -1,30 +1,26 @@
 import java.util.ArrayList;
 
 public class SalesManager extends Employee {
-    ArrayList<Employee> employees;
+    ArrayList<Employee> employees = new ArrayList<Employee>();
 
-    public SalesManager(int employeeID, String employeeName, ArrayList<Customer> myCustomers, double salary, SalesManager manager, ArrayList<Employee> employees) {
-        super(employeeID, employeeName, myCustomers);
+    public SalesManager(int employeeID, String employeeName, double salary, SalesManager manager) {
+        super(employeeID, employeeName);
         this.salary = 75000;
         this.manager = manager;
-        this.employees = employees;
     }
 
     public void addEmployees(Employee employee) {
         employees.add(employee);
     }
 
-    public ArrayList<Employee> getEmployees(){
+    public ArrayList<Employee> getEmployees() {
         return employees;
     }
 
     public double totalSales() {
         double A = 0, B = 0;
-
-            A = getEmployees().size();
-            B = getCustomers().size();
-
-       // System.out.println("employees: " + getEmployees().size() + " customers: " + getCustomers().size());
+        A = getEmployees().size();
+        B = getCustomers().size();
         return ((A * 500) + (B * 200));
     }
 
@@ -47,6 +43,7 @@ public class SalesManager extends Employee {
 
     /**
      * for reference %s means insert string and %d is insert double.
+     *
      * @return
      */
     @Override
