@@ -7,14 +7,20 @@ public class Main {
         ArrayList<Employee> empList1 = new ArrayList<Employee>();
         ArrayList<Employee> empList2 = new ArrayList<Employee>();
         ArrayList<Employee> empList3 = new ArrayList<Employee>();
+        //associates customers
         ArrayList<Customer> empList4 = new ArrayList<>();
         ArrayList<Customer> empList5 = new ArrayList<>();
         ArrayList<Customer> empList6 = new ArrayList<>();
         ArrayList<Customer> empList7 = new ArrayList<>();
+        //Sales Managers customers
+        ArrayList<Customer> empList8 = new ArrayList<>();
+        ArrayList<Customer> empList9 = new ArrayList<>();
+        ArrayList<Customer> empList10 = new ArrayList<>();
 //SalesManagers
-        SalesManager Serenity = new SalesManager(75000, null, empList1);
-        SalesManager Jose = new SalesManager(75000, Serenity, empList2);
-        SalesManager Amy = new SalesManager(75000, Serenity, empList3);
+        SalesManager Serenity = new SalesManager(101,"Serenity",empList8,75000, null, empList1);
+        SalesManager Jose = new SalesManager(37,"Jose",empList9,75000, Serenity, empList2);
+        SalesManager Amy = new SalesManager(112,"Amy",empList10,75000, Serenity, empList3);
+
         //SalesAssociate
         SalesAssociate David = new SalesAssociate(105,"David", empList4,35000, Serenity, null);
         SalesAssociate Emily = new SalesAssociate(42,"Emily",empList5,35000, Jose, null);

@@ -5,7 +5,8 @@ public class SalesManager extends Employee{
     SalesManager manager;
     ArrayList<Employee> employees;
 
-    public SalesManager(double salary, SalesManager manager, ArrayList<Employee> employees){
+    public SalesManager(int employeeID, String employeeName, ArrayList<Customer> myCustomers,double salary, SalesManager manager, ArrayList<Employee> employees){
+        super(employeeID,employeeName,myCustomers);
         this.salary = salary;
         this.manager = manager;
         this.employees = employees;
