@@ -11,20 +11,22 @@ public abstract class Employee {
     public Employee(int employeeID, String employeeName) {
         this.employeeID = employeeID;
         this.employeeName = employeeName;
-    //    this.myCustomers = myCustomers;
     }
 
-    public void setManager(SalesManager salesManager){
+    public void setManager(SalesManager salesManager) {
         this.manager = salesManager;
         salesManager.addEmployees(this);
     }
-    public void addCustomer(Customer customer){
-       this.myCustomers.add(customer);
-       customer.setEmployee(this);
+
+    public void addCustomer(Customer customer) {
+        this.myCustomers.add(customer);
+        customer.setEmployee(this);
     }
-    public ArrayList<Customer> getCustomers(){
+
+    public ArrayList<Customer> getCustomers() {
         return myCustomers;
     }
+
     public abstract String toString();
 
     public int getEmployeeID() {

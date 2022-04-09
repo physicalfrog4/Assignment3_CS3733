@@ -47,7 +47,6 @@ public class Customer {
                 System.out.print(", ");
             }
         }
-        System.out.println();
         return "";
     }
 

@@ -8,7 +8,6 @@ public class SalesAssociate extends Employee {
         super(employeeID, employeeName);
         this.salary = salary;
         this.salesManager = salesManager;
-
     }
 
     public double getSalary() {
