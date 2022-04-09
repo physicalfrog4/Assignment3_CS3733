@@ -32,5 +32,7 @@ public class Main {
         Customer Lisa = new Customer(43, "Lisa");
         Customer Damien = new Customer(97, "Damien");
         Customer Oliver = new Customer(35, "Oliver");
+        Employee.toString(Serenity);
+
     }
 }

@@ -6,6 +6,7 @@ public class SalesAssociate extends Employee{
     ArrayList<Employee> employees;
 
     public SalesAssociate(double salary, SalesManager salesManager, ArrayList employees) {
+        super(employeeID, employeeName, myCustomers);
         this.salary = salary;
         this.salesManager = salesManager;
         this.employees = employees;
@@ -35,4 +36,5 @@ public class SalesAssociate extends Employee{
     public void setEmployees(ArrayList<Employee> employees) {
         this.employees = employees;
     }
+
 }

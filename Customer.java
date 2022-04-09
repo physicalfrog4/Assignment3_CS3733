@@ -14,6 +14,30 @@ public class Customer {
         myEmployee.add(employee);
     }
 
+    public void setCustomerID(int customerID) {
+        this.customerID = customerID;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public void setMyEmployee(ArrayList<Employee> myEmployee) {
+        this.myEmployee = myEmployee;
+    }
+
+    public int getCustomerID() {
+        return customerID;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public ArrayList<Employee> getMyEmployee() {
+        return myEmployee;
+    }
+
     public String toString() {
         return "";
     }

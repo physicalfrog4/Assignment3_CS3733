@@ -1,9 +1,16 @@
 import java.util.ArrayList;
 
 public abstract class Employee {
-    private int employeeID;
-    private String employeeName;
-    ArrayList<Customer> myCustomers;
+    public int employeeID;
+    public String employeeName;
+    public ArrayList<Customer> myCustomers;
+
+    public Employee(int employeeID, String employeeName, ArrayList<Customer> myCustomers) {
+        this.employeeID = employeeID;
+        this.employeeName = employeeName;
+        this.myCustomers = myCustomers;
+    }
+
 
     public void setManager(SalesManager salesManager){
         salesManager.addEmployees(salesManager);
@@ -15,15 +22,16 @@ public abstract class Employee {
         return null;
     }
 
-    public String toString(){
-        return "";
+    public static String toString(SalesManager salesManager){
+        return "Sales Manager:" + salesManager.getEmployeeName() + "Manager: " + salesManager.getManager()
+                + "Employees: " + salesManager.getEmployees();
     }
 
-    private int getEmployeeID() {
+    public int getEmployeeID() {
         return employeeID;
     }
 
-    private String getEmployeeName() {
+    public String getEmployeeName() {
         return employeeName;
     }
 
