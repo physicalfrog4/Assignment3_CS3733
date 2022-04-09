@@ -12,7 +12,6 @@ public class Main {
         ArrayList<Customer> empList5 = new ArrayList<>();
         ArrayList<Customer> empList6 = new ArrayList<>();
         ArrayList<Customer> empList7 = new ArrayList<>();
-
         //Sales Managers customers
         ArrayList<Customer> custList1 = new ArrayList<>();
         ArrayList<Customer> custList2 = new ArrayList<>();
@@ -50,6 +49,8 @@ public class Main {
         Amy.addCustomer(Damien);
         George.addCustomer(Oliver);
 
+        //Total Sales.
+        /*
         System.out.println(Serenity.totalSales());
         System.out.println(Jose.totalSales());
         System.out.println(Amy.totalSales());
@@ -57,6 +58,21 @@ public class Main {
         System.out.println(Emily.totalSales());
         System.out.println(George.totalSales());
         System.out.println(Anne.totalSales());
+
+         */
+
+        //Managers .toString()
+        System.out.println(Serenity.toString());
+        System.out.println(Jose.toString());
+        System.out.println(Amy.toString());
+        //Associates .toString()
+
+        System.out.println(David.toString());
+        System.out.println(Emily.toString());
+        System.out.println(George.toString());
+        System.out.println(Damien.toString());
+
+
 
     }
 }
