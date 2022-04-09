@@ -7,7 +7,7 @@ public class Main {
         ArrayList<Employee> empList1 = new ArrayList<Employee>();
         ArrayList<Employee> empList2 = new ArrayList<Employee>();
         ArrayList<Employee> empList3 = new ArrayList<Employee>();
-        //associates customers
+        //Associates customers
         ArrayList<Customer> empList4 = new ArrayList<>();
         ArrayList<Customer> empList5 = new ArrayList<>();
         ArrayList<Customer> empList6 = new ArrayList<>();
@@ -26,7 +26,7 @@ public class Main {
         Customer Damien = new Customer(97, "Damien");
         Customer Oliver = new Customer(35, "Oliver");
 
-
+        //SalesManager
         SalesManager Serenity = new SalesManager(101, "Serenity", notCust, 75000, null, empList1);
         SalesManager Jose = new SalesManager(37, "Jose", notCust, 75000, Serenity, empList2);
         SalesAssociate David = new SalesAssociate(105, "David", custList1, 35000, Serenity, null);
@@ -49,24 +49,12 @@ public class Main {
         Amy.addCustomer(Damien);
         George.addCustomer(Oliver);
 
-        //Total Sales.
-        /*
-        System.out.println(Serenity.totalSales());
-        System.out.println(Jose.totalSales());
-        System.out.println(Amy.totalSales());
-        System.out.println(David.totalSales());
-        System.out.println(Emily.totalSales());
-        System.out.println(George.totalSales());
-        System.out.println(Anne.totalSales());
-
-         */
 
         //Managers .toString()
         System.out.println(Serenity.toString());
         System.out.println(Jose.toString());
         System.out.println(Amy.toString());
         //Associates .toString()
-
         System.out.println(David.toString());
         System.out.println(Emily.toString());
         System.out.println(George.toString());
