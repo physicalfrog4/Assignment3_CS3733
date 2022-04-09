@@ -1,10 +1,8 @@
 import java.util.ArrayList;
 
 public class SalesManager extends Employee {
-    //double salary;
-    //SalesManager manager;
-    ArrayList<Employee> employees = new ArrayList<Employee>();
 
+    ArrayList<Employee> employees = new ArrayList<Employee>();
     public SalesManager(int employeeID, String employeeName, double salary, SalesManager manager) {
         super(employeeID, employeeName);
         this.salary = 75000;
