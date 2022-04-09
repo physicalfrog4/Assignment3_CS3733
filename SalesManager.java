@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 
 public class SalesManager extends Employee {
-    //double salary;
-    //SalesManager manager;
     ArrayList<Employee> employees;
 
     public SalesManager(int employeeID, String employeeName, ArrayList<Customer> myCustomers, double salary, SalesManager manager, ArrayList<Employee> employees) {
