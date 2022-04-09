@@ -27,15 +27,6 @@ public abstract class Employee {
     }
     public abstract String toString();
 
-    /* This was my old code, I'm trying to implement a personalized one.
-    public static String toString(SalesManager salesManager){
-
-        return "Sales Manager:" + salesManager.getEmployeeName() + "Manager: " + salesManager.getManager()
-                + "Employees: " + salesManager.getEmployees() + "Total Salary: " + salesManager.totalSales();
-    }
-
-     */
-
     public int getEmployeeID() {
         return employeeID;
     }

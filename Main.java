@@ -12,7 +12,7 @@ public class Main {
         Customer Damien = new Customer(97, "Damien");
         Customer Oliver = new Customer(35, "Oliver");
 
-
+        //SalesManager
         SalesManager Serenity = new SalesManager(101, "Serenity", 75000, null);
         SalesManager Jose = new SalesManager(37, "Jose", 75000, Serenity);
         SalesAssociate David = new SalesAssociate(105, "David", 35000, Serenity);
