@@ -5,7 +5,7 @@ public abstract class Employee {
     private String employeeName;
 
     public void setManager(SalesManager salesManager){
-
+        salesManager.addEmployees(salesManager);
     }
     public void addCustomer(Customer customer){
 
@@ -16,5 +16,21 @@ public abstract class Employee {
 
     public String toString(){
         return "";
+    }
+
+    private int getEmployeeID() {
+        return employeeID;
+    }
+
+    private String getEmployeeName() {
+        return employeeName;
+    }
+
+    private void setEmployeeID(int employeeID) {
+        this.employeeID = employeeID;
+    }
+
+    private void setEmployeeName(String employeeName) {
+        this.employeeName = employeeName;
     }
 }
