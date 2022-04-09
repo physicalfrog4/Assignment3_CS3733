@@ -15,7 +15,6 @@ public abstract class Employee {
 
     public void setManager(SalesManager salesManager) {
         this.manager = salesManager;
-        salesManager.addEmployees(this);
     }
 
     public void addCustomer(Customer customer) {
