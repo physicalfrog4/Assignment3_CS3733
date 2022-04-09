@@ -1,14 +1,13 @@
+import java.util.ArrayList;
+
 public class SalesAssociate {
     double salary;
     SalesManager salesManager;
+    ArrayList<Employee> employees;
 
-    public SalesAssociate(double salary, SalesManager salesManager) {
+    public SalesAssociate(double salary, SalesManager salesManager, ArrayList employees) {
         this.salary = salary;
         this.salesManager = salesManager;
-    }
-
-    public double totalSales() {
-        double ans = 0;
-        return ans;
+        this.employees = employees;
     }
 }
